@@ -1,0 +1,30 @@
+
+
+ <main class="signin">
+ <h2>Log in</h2>
+        <div class="tumo-gif"></div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field" >
+ 
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email" %>
+  </div>
+
+  <div class="field" >
+  
+    <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field checkfield" > 
+     <div class="check"> <%= f.check_box :remember_me %>
+      <p class="rm">Remember </p>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</main>

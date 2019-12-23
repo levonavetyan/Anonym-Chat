@@ -1,6 +1,26 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.aaaa{
+.bgc{
     background-color: #EAEDED;
+}
+
+.classh1{
+    margin-top:100px;
+    padding-bottom: 30px; 
+}
+.classtext{
+    font-size: 20px;
+	color: white;
+    font-size: 22px;
+    transition: color 1s;
+    
+}
+
+.classtext:hover{
+   color: black ;
+}
+
+.email{
+    margin-top: 20px;
 }

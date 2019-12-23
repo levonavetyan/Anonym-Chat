@@ -14,3 +14,232 @@
  *= require_self
  */
 @import "bootstrap";
+
+
+
+* {
+    transition-duration: 0.2s;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+} 
+
+.bodycolor {
+    background-color: #98B4D4;
+}
+
+
+
+main.signin {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+} main.signin form {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+} main.signin form input {
+    border-radius: 10px;
+    max-width: 600px;
+    font-size: 11pt;
+    padding: 10px;
+    width: 100%;
+} main.signin form input[type=submit] {
+    margin-top: 10px;
+    color: white;
+    border: none;
+} main.signin form input[type=submit]:enabled:hover {
+    background-color: #08e;
+} main.signin img {
+    border: 2px solid #222;
+    image-resolution: 100px;
+    margin-bottom: 10px;
+    width: 300px;
+} .tumo-gif {
+    max-width: 600px;
+    background-image: image-url("tumo.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 20%;
+    width: 60%;
+} .or {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+} .or p.signin-p {
+    background-color: #222;
+    text-align: center;
+    font-size: 130%;
+    color: #fff;
+    width: 50px;
+    z-index: 1;
+} main.signin form a {
+    margin-top: 10px;
+    font-size: 120%;
+    color: #08e;
+} .or p.signup-p {
+    background-color: #222;
+    text-align: center;
+    font-size: 130%;
+    color: #fff;
+    width: 220px;
+    z-index: 1;
+} main.signin form input[type=submit]:enabled {
+    background-color: #09f;
+}  main.signin form input[type=submit]:disabled {
+    background-color: #8bf;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 15%;
+    margin-top: 10px;
+} .field em {
+    color: gray;
+}
+.edit_user{
+    margin-top: 20px;
+    height: 40%;
+    width: 70%;
+}
+.actions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button_to{
+    width: 30%;
+}
+.signin a{
+    margin-top: 5%;
+    font-size: 22pt;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    main.signin {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        
+        width: 100%;
+        height: 100%;
+    } main.signin form {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    } main.signin form input {
+        font-size: 11pt;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 10px;
+    } main.signin form input[type=submit] {
+        margin-top: 10px;
+        color: white;
+        border: none;
+    } main.signin form input[type=submit]:enabled:hover {
+        background-color: #08e;
+    } main.signin img {
+        border: 2px solid #222;
+        image-resolution: 100px;
+        margin-bottom: 10px;
+        width: 300px;
+    } .tumo-gif {
+        margin-top: 15%;
+        background-image: image-url("tumo.gif");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        
+        height: 20%;
+        width: 60%;
+    } .or {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        display: flex;
+    } .or p.signin-p {
+        background-color: #222;
+        text-align: center;
+        font-size: 130%;
+        color: #fff;
+        width: 50px;
+        z-index: 1;
+    } main.signin form a {
+        margin-top: 10px;
+        font-size: 120%;
+        color: #08e;
+    } .or p.signup-p {
+        background-color: #222;
+        text-align: center;
+        font-size: 130%;
+        color: #fff;
+        width: 220px;
+        z-index: 1;
+    } main.signin form input[type=submit]:enabled {
+        background-color: #09f;
+    }  main.signin form input[type=submit]:disabled {
+        background-color: #8bf;
+    }
+    
+    .field{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 15%;
+    } .field em {
+        color: gray;
+    }
+    .edit_user{
+        height: 40%;
+        width: 70%;
+    }
+    .actions{
+        width: 100%;
+    }
+    .button_to{
+        font-size: 100%;
+        width: 30%;
+    
+    }
+    .signin a{
+        margin-top: 5%;
+        font-size: 14pt;
+    }
+}
+.check{
+    display: flex;
+    align-items: center;
+} .check .rm {
+    width: 100px;  
+    margin-top: 17px;  
+}
+ .checkfield{
+     width: 200px;
+ } 
