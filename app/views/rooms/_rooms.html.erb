@@ -1,22 +1,22 @@
 <div class="main-rooms">
-  <%= link_to new_room_path, class: 'rooms-button' do %>
-    Rooms
-  <% end %>
+  <div class="rooms-button">
+    <p>Rooms</p>
+  </div>
   <% if @rooms.present? %>
   <div class="dr-rooms">
     <div class="rooms">
       <% @rooms.each do |room| %>
-        <%= link_to room.name, room_path(room), class: 'room-i' %>
+       <%= link_to room.name, room_path(room), class: 'room-i' %>
       <% end %>
       
     </div>
     <% else %>
-    <div class="rooms">
+    <div class="roomss">
       The are no rooms
     </div>
     <% end %>
     <%= link_to new_room_path, class: 'create-button' do %>
-      Create a room
+      +
     <% end %>
   </div>
 </div>

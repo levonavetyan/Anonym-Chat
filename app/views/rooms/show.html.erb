@@ -1,33 +1,81 @@
-<h1>
-  <%= @room.name %>
-</h1>
 
-<div class="row">
-  <div class="col-12 col-md-3">
-    <%= render partial: 'rooms' %>
-  </div>
+<html class="home-html">
+  <head>
 
-  <div class="col">
-    <div class="chat">
-      <% @room_messages.each do |room_message| %>
-        <%= room_message %>
-      <% end %>
-    </div>
+  </head>
 
-    <%= simple_form_for @room_message, remote: true do |form| %>
-      <div class="input-group mb-3">
-        <%= form.input :message, as: :string,
-                                 wrapper: false,
-                                 label: false,
-                                 input_html: {
-                                   class: 'chat-input'
-                                 } %>
-        <div class="input-group-append">
-          <%= form.submit "Send", class: 'btn btn-primary chat-input' %>
-        </div>
+  <body>
+    <main class="room-page">
+      <header class="home-pg-header">
+          <div class="menu">
+            <div class="left-menu-button">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="left-menu">
+              <div class="top_box">
+                <a href="users/edit" class="lm-i">
+                  <div class="logo"></div>
+                  <p class="lm-p">My Account</p>
+                </a>
+                <a href="#" class="lm-i">
+                  <p class="lm-p">Settings</p>
+                </a>
+                <a href="" class="lm-i">
+                  <p class="lm-p">Chat</p>
+                </a>
+              </div>
+              <div class="bottom_box">
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              </div>
+            </div>
+          </div>
+          <p class="room-name">
+            <%= @room.name %>
+          </p>
+          <p></p>
+      </header>
+      <div class="chat-content">
+          <div class="chat-messages">
+            <% @room_messages.each do |room_message| %>
+              <div class="">
+                <div class="">
+                  <div class="">
+                    <div class="avatar"></div>
+                  </div>
+
+                  <div class="">
+                    <div class="">
+                      <p class="message-content">
+                        <%= room_message.message %>
+                      </p>
+
+                      <div class="msg-d">
+                        <p class="message-data">
+                          <%= room_message.created_at %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+          <%= simple_form_for @room_message, remote: true do |form| %>
+            <div class="send-n-message">
+              <%= form.input :message, as: :string,
+                                      wrapper: false,
+                                      label: false,
+                                      input_html: {
+                                        class: 'chat-input'
+                                      } %>
+               <%= form.submit "Send", class: 'send-button' %>
+            </div>
+            <%= form.input :room_id, as: :hidden %>
+          <% end %>
       </div>
-
-      <%= form.input :room_id, as: :hidden %>
-    <% end %>
-  </div>
-</div>
+    </main>
+  </body>
+</html>
