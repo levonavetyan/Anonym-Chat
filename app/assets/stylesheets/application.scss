@@ -452,30 +452,6 @@ main.home-page {
 
 
 
-.chat-message-container {
-    padding: 5px;
-    
-    
-    .avatar {
-        margin: 5px;
-        width: 50px;
-        height: 50px;
-        background-image: image-url('avatar.png');
-    }
-    
-    .message-content {
-        padding: 5px;
-        border: 1px solid $primary;
-        border-radius: 5px;
-        background: lighten($primary, 10%);
-        color: $white;
-    }
-    
-    & + .chat-message-container {
-        margin-top: 10px;
-    }
-}
-
 
 .chat-content {
     background-color: #000000;
@@ -526,3 +502,16 @@ main.home-page {
     border-radius: 0 10px 10px 0;
 }
 
+.chat_text_area{
+    background-color: #1A1A1D;
+    color: #C3073F;
+    margin: 0 0 0;
+}
+.message-content{
+    margin-right: 20%;
+}
+.message-data{
+    margin: 0 0 5px;
+    font-size: 14px;
+    margin-left: 80%;
+}

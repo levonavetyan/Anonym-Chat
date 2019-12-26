@@ -1,4 +1,43 @@
+<html class="home-html">
+  <head>
+
+  </head>
+
+  <body>
+    <main class="room-page">
+      <header class="home-pg-header">
+          <div class="menu">
+            <div class="left-menu-button">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="left-menu">
+              <div class="top_box">
+                <a href="/" class="lm-i">
+                  <div class="logo"></div>
+                  <p class="lm-p">My Account</p>
+                </a>
+                <a href="/users/edit" class="lm-i">
+                  <p class="lm-p">Settings</p>
+                </a>
+                <a href="" class="lm-i">
+                  <p class="lm-p">Chat</p>
+                </a>
+              </div>
+              <div class="bottom_box">
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              </div>
+            </div>
+          </div>
+          <p class="room-name">
+            <%= @room.name %>
+          </p>
+          <p></p>
+      </header>
 <%= simple_form_for @room do |form| %>
   <%= form.input :name %>
   <%= form.submit "Save", class: 'btn btn-success' %>
 <% end %>
+
+</html>
