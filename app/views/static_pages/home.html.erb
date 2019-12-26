@@ -41,17 +41,23 @@
       <div class="content">
         <div class="main_block">
                 <% @tweets.each do |tweet| %>
-         <div class="post_content">
-                  <div class="sub_box">
-                  <p><%= tweet.subject %></p>
+                  <div class="post_content">
+                    <div class="sub_box">
+                    <p><%= tweet.subject %></p>
+                    </div>
+                    <div class="con_box">
+                      <p><%= tweet.tweet_content %></p>
+                    </div>
+                    <div class="bottom_box">
+                      <div class="like_box">
+                      <%= link_to "I like it", like_tweet_path(tweet), method: :put, class: "like" %><span>(<%= tweet.get_upvotes.size %>)</span>
+                      <%= link_to "I hate it", dislike_tweet_path(tweet), method: :put, class: "like" %><span>(<%= tweet.get_downvotes.size %>)</span>
+                     </div>
+                      <div class="time_box">
+                      <p><%= tweet.created_at %></p>
+                    </div>
+                     </div>
                   </div>
-                  <div class="con_box">
-                    <p><%= tweet.tweet_content %></p>
-                  </div>
-                  <div class="time_box">
-                    <p><%= tweet.created_at %></p>
-                  </div>
-        </div>
                 <% end %>
               
       </div>

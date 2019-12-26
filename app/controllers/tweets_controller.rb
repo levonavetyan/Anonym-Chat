@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   # GET /tweets
   # GET /tweets.json
@@ -60,7 +60,16 @@ class TweetsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  def upvote
+    @tweet = Tweet.find(params[:id]) 
+    @tweet.upvote_by(current_user)
+    redirect_back(fallback_location: root_path)
+  end
+  def downvote
+    @tweet = Tweet.find(params[:id]) 
+    @tweet.downvote_by(current_user)
+    redirect_back(fallback_location: root_path)
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
