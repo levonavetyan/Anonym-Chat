@@ -11,7 +11,7 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 gem 'redis'
 gem 'simple_form'
-
+gem 'redis'
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
