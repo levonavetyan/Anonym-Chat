@@ -13,233 +13,504 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap";
+ @import "bootstrap";
 
 
-
-* {
-    transition-duration: 0.2s;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    border: 0;
-} 
-
-.bodycolor {
-    background-color: #98B4D4;
-}
-
-
-
-main.signin {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 100%;
-} main.signin form {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-} main.signin form input {
-    border-radius: 10px;
-    max-width: 600px;
-    font-size: 11pt;
-    padding: 10px;
-    width: 100%;
-} main.signin form input[type=submit] {
-    margin-top: 10px;
-    color: white;
-    border: none;
-} main.signin form input[type=submit]:enabled:hover {
-    background-color: #08e;
-} main.signin img {
-    border: 2px solid #222;
-    image-resolution: 100px;
-    margin-bottom: 10px;
-    width: 300px;
-} .tumo-gif {
-    max-width: 600px;
-    background-image: image-url("tumo.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    height: 20%;
-    width: 60%;
-} .or {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    display: flex;
-} .or p.signin-p {
-    background-color: #222;
-    text-align: center;
-    font-size: 130%;
-    color: #fff;
-    width: 50px;
-    z-index: 1;
-} main.signin form a {
-    margin-top: 10px;
-    font-size: 120%;
-    color: #08e;
-} .or p.signup-p {
-    background-color: #222;
-    text-align: center;
-    font-size: 130%;
-    color: #fff;
-    width: 220px;
-    z-index: 1;
-} main.signin form input[type=submit]:enabled {
-    background-color: #09f;
-}  main.signin form input[type=submit]:disabled {
-    background-color: #8bf;
-}
-
-.field{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 15%;
-    margin-top: 10px;
-} .field em {
-    color: gray;
-}
-.edit_user{
-    margin-top: 20px;
-    height: 40%;
-    width: 70%;
-}
-.actions{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.button_to{
-    width: 30%;
-}
-.signin a{
-    margin-top: 5%;
-    font-size: 22pt;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    
-    main.signin {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        display: flex;
-        
-        width: 100%;
-        height: 100%;
-    } main.signin form {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-    } main.signin form input {
-        font-size: 11pt;
-        padding: 10px;
-        border-radius: 10px;
-        width: 100%;
-        margin-top: 10px;
-    } main.signin form input[type=submit] {
-        margin-top: 10px;
-        color: white;
-        border: none;
-    } main.signin form input[type=submit]:enabled:hover {
-        background-color: #08e;
-    } main.signin img {
-        border: 2px solid #222;
-        image-resolution: 100px;
-        margin-bottom: 10px;
-        width: 300px;
-    } .tumo-gif {
-        margin-top: 15%;
-        background-image: image-url("tumo.gif");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 10px;
-        
-        height: 20%;
-        width: 60%;
-    } .or {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-        display: flex;
-    } .or p.signin-p {
-        background-color: #222;
-        text-align: center;
-        font-size: 130%;
-        color: #fff;
-        width: 50px;
-        z-index: 1;
-    } main.signin form a {
-        margin-top: 10px;
-        font-size: 120%;
-        color: #08e;
-    } .or p.signup-p {
-        background-color: #222;
-        text-align: center;
-        font-size: 130%;
-        color: #fff;
-        width: 220px;
-        z-index: 1;
-    } main.signin form input[type=submit]:enabled {
-        background-color: #09f;
-    }  main.signin form input[type=submit]:disabled {
-        background-color: #8bf;
-    }
-    
-    .field{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        height: 15%;
-    } .field em {
-        color: gray;
-    }
-    .edit_user{
-        height: 40%;
-        width: 70%;
-    }
-    .actions{
-        width: 100%;
-    }
-    .button_to{
-        font-size: 100%;
-        width: 30%;
-    
-    }
-    .signin a{
-        margin-top: 5%;
-        font-size: 14pt;
-    }
-}
-.check{
-    display: flex;
-    align-items: center;
-} .check .rm {
-    width: 100px;  
-    margin-top: 17px;  
-}
- .checkfield{
-     width: 200px;
+ * {
+     background-repeat: no-repeat;
+     background-position: center;
+     transition-duration: 0.2s;
+     background-size: contain;
+     box-sizing: border-box;
+     text-decoration: none;
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+     border: 0;
  } 
+ 
+ .bodycolor {
+     background-color: #1A1A1D;
+ }
+ 
+ 
+ 
+ main.signin {
+     color: #C3073F;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     position: absolute;
+     display: flex;
+     width: 100%;
+     height: 100%;
+ } main.signin form {
+     flex-direction: column;
+     align-items: center;
+     display: flex;
+     justify-content: space-around;
+ } main.signin form input {
+     border-radius: 10px;
+     max-width: 600px;
+     font-size: 11pt;
+     padding: 10px;
+     width: 100%;
+ } main.signin form input[type=submit] {
+     margin-top: 10px;
+     color: white;
+     border: none;
+ } main.signin form input[type=submit]:enabled:hover {
+     background-color: #08e;
+ } main.signin img {
+     border: 2px solid #222;
+     image-resolution: 100px;
+     margin-bottom: 10px;
+     width: 300px;
+ } .tumo-gif {
+     background-image: image-url("tumo.gif");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     border-radius: 10px;
+     max-width: 600px;
+     height: 20%;
+     width: 60%;
+ } .or {
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 10px;
+     display: flex;
+ } .or p.signin-p {
+     background-color: #222;
+     text-align: center;
+     font-size: 130%;
+     color: #fff;
+     width: 50px;
+     z-index: 1;
+ } main.signin form a {
+     margin-top: 10px;
+     font-size: 120%;
+     color: #08e;
+ } .or p.signup-p {
+     background-color: #222;
+     text-align: center;
+     font-size: 130%;
+     color: #fff;
+     width: 220px;
+     z-index: 1;
+ } main.signin form input[type=submit]:enabled {
+     background-color: #09f;
+ }  main.signin form input[type=submit]:disabled {
+     background-color: #8bf;
+ }
+ 
+ .field{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+     width: 100%;
+     height: 15%;
+     margin-top: 10px;
+ } .field em {
+     color: gray;
+ }
+ .edit_user{
+     margin-top: 20px;
+     height: 40%;
+     width: 70%;
+ }
+ .actions{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+ .button_to{
+     width: 30%;
+ }
+ .signin a{
+     margin-top: 5%;
+     font-size: 22pt;
+ }
+ 
+ 
+ 
+ @media only screen and (max-width: 600px) {
+     
+     main.signin {
+         justify-content: center;
+         flex-direction: column;
+         align-items: center;
+         position: absolute;
+         display: flex;
+         
+         width: 100%;
+         height: 100%;
+     } main.signin form {
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         display: flex;
+     } main.signin form input {
+         font-size: 11pt;
+         padding: 10px;
+         border-radius: 10px;
+         width: 100%;
+         margin-top: 10px;
+     } main.signin form input[type=submit] {
+         margin-top: 10px;
+         color: white;
+         border: none;
+     } main.signin form input[type=submit]:enabled:hover {
+         background-color: #08e;
+     } main.signin img {
+         border: 2px solid #222;
+         image-resolution: 100px;
+         margin-bottom: 10px;
+         width: 300px;
+     } .tumo-gif {
+         margin-top: 15%;
+         background-image: image-url("tumo.gif");
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         border-radius: 10px;
+         
+         height: 20%;
+         width: 60%;
+     } .or {
+         justify-content: center;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 10px;
+         display: flex;
+     } .or p.signin-p {
+         background-color: #222;
+         text-align: center;
+         font-size: 130%;
+         color: #fff;
+         width: 50px;
+         z-index: 1;
+     } main.signin form a {
+         margin-top: 10px;
+         font-size: 120%;
+         color: #08e;
+     } .or p.signup-p {
+         background-color: #222;
+         text-align: center;
+         font-size: 130%;
+         color: #fff;
+         width: 220px;
+         z-index: 1;
+     } main.signin form input[type=submit]:enabled {
+         background-color: #09f;
+     }  main.signin form input[type=submit]:disabled {
+         background-color: #8bf;
+     }
+     
+     .field{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-around;
+         width: 100%;
+         height: 15%;
+     } .field em {
+         color: gray;
+     }
+     .edit_user{
+         height: 40%;
+         width: 70%;
+     }
+     .actions{
+         width: 100%;
+     }
+     .button_to{
+         font-size: 100%;
+         width: 30%;
+     
+     }
+     .signin a{
+         margin-top: 5%;
+         font-size: 14pt;
+     }
+ }
+ .check{
+     display: flex;
+     align-items: center;
+ } .check .rm {
+     width: 100px;  
+     margin-top: 17px;  
+ }
+  .checkfield{
+      width: 200px;
+  } 
+  
+ //==========================================================================================
+ 
+ 
+ .home-pg-header, .home-pg-footer {
+     justify-content: space-between;
+     background-color: #1A1A1D;
+     align-items: center;
+     min-height: 100px;
+     min-width: 400px;
+     padding: 20px;
+     display: flex;
+     width: 100%;
+ } .content {
+     // background-image: image-url("Rain_spray.gif");
+     background-attachment: fixed;
+     background-color: #000000;
+     background-size: cover;
+     justify-content: center;
+     min-height: 1500px;
+     min-width: 500px;
+     display: flex;
+     width: 100%;
+ }
+ .main_block{
+     width: 60%;
+     min-width: 600px;
+     background-color: #EAEDED !important;
+ }
+ 
+ 
+ main.home-page {
+     background-color: #98b4d4;
+     flex-direction: column;
+     align-items: center;
+     min-height: 1400px;
+     position: absolute;
+     min-width: 400px;
+     display: flex;
+     width: 100%;
+ }
+ .left-menu-button {
+     justify-content: space-around;
+     flex-direction: column;
+     display: flex;
+     height: 50px;
+     width: 50px;
+ }
+ .left-menu-button .line {
+     border: 3px solid #ffffff;
+     border-radius: 3px;
+     width: 100%;
+ }
+ .left-menu {
+     display: flex;
+     box-shadow: 10px 0px 50px 0px #222;
+     background-color: #1A1A1D;
+     position: absolute;
+     min-width: 300px;
+     max-width: 500px;
+     padding: 20px;
+     height: 100vh;
+     left: -600px;
+     width: 30%;
+     top: 0;
+     overflow: hidden auto;
+     flex-direction: column;
+     justify-content: space-between;
+     position: fixed; 
+ }
+ 
+ .menu {width: 70px}
+ .menu:hover .left-menu {left: 0px}
+ 
+ .logout {
+     background-image: image-url("logout.png");
+     background-color: transparent;
+     outline: none !important;
+     background-size: 80%;
+     border-radius: 10px;
+     height: 50px;
+     width: 50px;
+ } .logout:hover {
+     background-color: #1A1A1D;
+ }
+ .navbar-link{
+     text-decoration: none;
+     border-radius: 10px;
+     margin-top: 10px;
+     padding: 10px;
+     display: flex; 
+ }
+ .navbar-link:hover{
+     background-color: #1A1A1D;
+     text-decoration: none;  
+ }
+ .lm-i {
+     text-decoration: none;
+     border-radius: 10px;
+     margin-top: 10px;
+     padding: 10px;
+     display: flex;
+ } .lm-i:hover {
+     background-color: #C3073F;
+     text-decoration: none;
+ }
+ .lm-p {
+     font-size: 150%;
+     margin: auto 0;
+     color:white;
+ }
+ .logo {
+     background-image: image-url("avatar.png");
+     border-radius: 50%;
+     margin-right: 10px;
+     height: 50px;
+     width: 50px;
+ }
+ 
+ 
+ //================================================================================================
+ 
+ .main-rooms {
+     margin-top: 20px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ .rooms-button {
+     background-color: #1A1A1D;
+     border-radius: 10px;
+     text-align: center;
+     padding-top: 5px;
+     color: #C3073F;
+     font-size: 150%;
+     height: 50px;
+     width: 90%;
+     user-select: none;
+ }
+ .rooms-button:hover{
+     text-decoration: none;
+     color: #6F2232;
+ }
+ .dr-rooms {
+     height: 0;
+     overflow: hidden;
+     display: flex;
+     width: 90%;
+     text-align: center;
+ }
+ 
+ .rooms {
+     border-radius: 10px 0 0 10px;
+     background-color: #cccccc;
+     transition-duration: 1s;
+     flex-direction: column;
+     overflow: hidden;
+     display: flex;
+     width: 100%;
+     width: 80%;
+ }
+ .room-i{
+     color: #000000;
+     border-radius: 10px 0 0 10px;
+ }
+ .room-i:hover{
+     background-color: #C3073F;
+     text-decoration: none;
+     color: white;
+     
+ }
+ .create-button {
+     background-color: #1A1A1D;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 20%;
+     padding-bottom: 20px;
+     text-align: center; 
+     font-size: 100px;
+     color: white;
+     transition-duration: 0.3s;
+     border-radius: 0 10px 10px 0;
+ }
+ 
+ .main-rooms:hover .dr-rooms {
+     height: auto;
+ }
+ .create-button:hover{
+     text-decoration: none;
+     color: #4E4E50;
+ } 
+ .chat {
+     border: 1px solid lighten($secondary, 40%);
+     background: lighten($secondary, 50%);
+     height: 50vh;
+     border-radius: 5px 5px 0 0;
+     overflow-y: auto;
+ }
+ 
+ 
+ 
+ 
+ 
+ .chat-content {
+     background-color: #000000;
+     height: 100%;
+     width: 80%;
+ }
+ 
+ .room-name {
+     color: #ffffff;
+     font-family: sans-serif;
+     font-size: 200%;
+ }
+ 
+ .header-content {
+     display: flex;
+ }
+ 
+ .room-page {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: #000000;
+     position: absolute;
+     height: 100%;
+     width: 100%;
+ }
+ .chat-messages {
+     background-color: #EAEDED;
+     height: calc(100% - 70px);
+     width: 100%;
+ }
+ 
+ .send-n-message {
+     display: flex;
+     height: 50px;
+     width: 100%;
+ }
+ .chat-input {
+     width: 80%;
+     border-radius: 10px 0 0 10px;
+     font-size: 120%;
+     padding-left: 10px;
+ }
+ .send-button {
+     width: 20%;
+     background-color: #C3073F;
+     color: #ffffff;
+     border-radius: 0 10px 10px 0;
+ }
+ 
+ .chat_text_area{
+     background-color: #1A1A1D;
+     color: #C3073F;
+     margin: 0 0 0;
+ }
+ .message-content{
+     margin-right: 20%;
+ }
+ .message-data{
+     margin: 0 0 5px;
+     font-size: 14px;
+     margin-left: 80%;
+ }

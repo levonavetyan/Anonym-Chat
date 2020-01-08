@@ -1,0 +1,68 @@
+<html class="home-html">
+  <head>
+
+  </head>
+
+  <body>
+    <main class="room-page">
+      <header class="home-pg-header">
+          <div class="menu">
+            <div class="left-menu-button">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="left-menu">
+              <div class="top_box">
+                <a href="/" class="lm-i">
+                  <div class="logo"></div>
+                  <p class="lm-p">My Account</p>
+                </a>
+                <a href="/users/edit" class="lm-i">
+                  <p class="lm-p">Settings</p>
+                </a>
+                <a href="" class="lm-i">
+                  <p class="lm-p">Chat</p>
+                </a>
+              </div>
+              <div class="bottom_box">
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              </div>
+            </div>
+          </div>
+          <p class="room-name">
+            <%= @room.title %>
+          </p>
+          <p></p>
+      </header>
+      <div class="chat-content">
+          <div class="chat-messages" id="room_messages"
+             data-channel-subscribe="room">
+            <% @room.messages.each do |message| %>
+                
+                    <div class="chat_text_area">
+                      <p class="message-content ">
+                        <%= message.content %>
+                      </p>
+                      
+                      <div class="msg-d">
+                        <p class="message-data">
+                          <%= message.timestamp %>
+                          <div id="post_msg">
+                        </div>
+                        </p>
+                      </div>
+                    </div>
+                    
+                         
+                
+            <% end %>
+          </div>
+
+ 
+
+          <%= render partial: 'messages/message_form', locals: {message: @message, room: @room}%>
+      </div>
+    </main>
+  </body>
+</html>

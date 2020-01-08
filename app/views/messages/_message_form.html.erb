@@ -1,0 +1,10 @@
+<%= simple_form_for message, remote: true, authenticity_token: true do |f| %>
+  <div class="send-n-message">
+              <%= f.input :content,
+                                      input_html: {
+                                        class: 'chat-input'
+                                      }, id: "msg", data: {textarea: "message"} %>
+
+  <%= f.hidden_field :room_id, value: room.id %>
+  <%= f.submit "Send", class: 'send-button', data: {send: "message", turbolinks: true} %>
+<% end %>
