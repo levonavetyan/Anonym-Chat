@@ -1,57 +1,8 @@
-<main class="home-page">
-  <header class="home-pg-header">
-  
-        <div class="menu">
-          
-          <div class="left-menu-button">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
+<main class="home-page text-light">
+  <h4>
+    <%= @tweet.tweet_content %>
+  </h4>
+  <%= link_to 'Edit', edit_tweet_path(@tweet), class: "tweet-subject"   %>
+  <%= link_to 'Back', tweets_path %>
 
-           
-          <div class="left-menu">
-            <div class="top_box">
-             
-              <a href="/" class="lm-i">
-                <div class="logo"></div>
-                <p class="lm-p">My Account</p>
-              </a>
-              <a href="/users/edit" class="lm-i">
-                <p class="lm-p">Settings</p>
-              </a>
-              <a href="rooms" class="lm-i">
-                <p class="lm-p">Chat</p>
-              </a>
-            
-            </div>
-            <div class="bottom_box">
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-            </div>
-        </div>
-      </header>
-   
-<p id="notice"><%= notice %></p>
-<%= @tweet.tweet_content %>
-<%= link_to 'Edit', edit_tweet_path(@tweet), class: "tweet-subject"   %> |
-<%= link_to 'Back', tweets_path %>
-
-  </main>
-<footer class="home-pg-footer">
-          <!--  <p class="navbar-text float-right">
-        <% if user_signed_in? %>
-          
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-        <% else %>
-          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-        <% end %>
-        </p> -->
-
-        <p id="notice"><%= notice %></p>
-      </footer>
-
-
-
-
+</main>

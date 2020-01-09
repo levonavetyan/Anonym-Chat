@@ -22,10 +22,19 @@ $(document).on('turbolinks:load', function () {
       // Called when there's incoming data on the websocket for this channel
       console.log("Recieving:")
       console.log(data)
-      $('#post_msg').append(`<div class="card-block"><div class="row">
-                       <div class="col-md-11"><p class="card-text"><span class="text-muted">`
-                       + data.user.email  + ' at ' + data.timestamp + ' says</span><br>'
-                       + data.message.content + '</p></div></div></div>')
+
+      if(data.user.id != parseInt(document.cookie.split('=')[1], 10)){
+        $('#post_msg').append(`<div class="chat_text_area"><p class="message-content ">` +
+        data.message.content + `</p><div class="msg-d"> <p class="message-data">` + data.timestamp +
+        `</p></div></div>`)
+      }
+      else{
+        console.log("here")
+        $('#post_msg').append(`<div class="chat_text_area"><p class="user_message-content ">` +
+        data.message.content + `</p><div class="msg-d"> <p class="user_message-data">` + data.timestamp +
+        `</p></div></div>`)
+      }
+
       $('#msg').val('')
 
       }

@@ -1,44 +1,38 @@
-
-
-    <main class="signin">
+<main class="signin">
     <h2>Sign up</h2>
-        <div class="tumo-gif"></div>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field" >
-    
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail" %>
-  </div>
-<div class="field" >
-    
-    <%= f.number_field  :tumoid, size:"10",  autofocus: true, autocomplete: "tumoid", placeholder: "TumoId" %>
-  </div>
-  <div class="field" >
-  
-    <%= f.text_field  :fname,  autofocus: true, autocomplete: "fname", placeholder: "First Name" %>
-  </div>
- <div class="field" >
-   
-    <%= f.text_field  :lname,  autofocus: true, autocomplete: "lname", placeholder: "Last Name" %>
-  </div> 
-  <div class="field">
-    
-  
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password(min 6 characters)" %>
-  </div>
+    <div class="tumo-gif"></div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field" placeholder="password confirm">
-    
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password Confirmation" %>
-  </div>
+        <div class="field" >
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail" %>
+        </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-   
+        <div class="field" >
+          <%= f.number_field  :tumoid, size:"10",  autofocus: true, autocomplete: "tumoid", placeholder: "TumoId" %>
+        </div>
 
-    
-<%= render "devise/shared/links" %>
-            </main>
+        <div class="field" >
+          <%= f.text_field  :fname,  autofocus: true, autocomplete: "fname", placeholder: "First Name" %>
+        </div>
+
+        <div class="field" >
+          <%= f.text_field  :lname,  autofocus: true, autocomplete: "lname", placeholder: "Last Name" %>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password(min 6 characters)" %>
+        </div>
+
+        <div class="field" placeholder="password confirm">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password Confirmation" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up" %>
+        </div>
+      <% end %>
+
+    <%= render "devise/shared/links" %>
+</main>

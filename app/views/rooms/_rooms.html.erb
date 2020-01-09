@@ -2,16 +2,17 @@
   <div class="rooms-button">
     <p>Rooms</p>
   </div>
+
   <% if @rooms.present? %>
   <div class="dr-rooms">
     <div class="rooms">
       <% @rooms.each do |room| %>
        <%= link_to room.title, room_path(room), class: 'room-i' %>
       <% end %>
-      
+
     </div>
     <% else %>
-    <div class="roomss">
+    <div class="roomss text-light">
       The are no rooms
     </div>
     <% end %>
