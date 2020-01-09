@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field" >
-    <%= form.text_field :subject, autofocus: true, autocomplete: "subject", placeholder: "Subject" %>
-    <%= form.text_field :tweet_content, placeholder:"Tweet Content" %>
+    <%= form.text_field :subject, autofocus: true, autocomplete: "subject", placeholder: "Subject", class:"tweet-subject" %>
+    <%= form.text_field :tweet_content, placeholder:"Tweet Content", class:"tweet-subject"  %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Submit', :class => "tweet-submit"%>
   </div>
 <% end %>
