@@ -8,7 +8,7 @@
           </div>
           <div class="left-menu">
             <div class="top_box">
-              <%= link_to 'My Account', edit_user_registration_path, :class => 'lm-i lm-p' %>
+              <%= link_to 'My Account', edit_user_registration_path, :class => 'lm-i' %>
               <%= link_to 'Edit profile', edit_user_registration_path, :class => 'lm-i' %>
               <%= link_to 'Chat', rooms_path, :class => 'lm-i' %>
               <%= link_to 'New Tweet', new_tweet_path, :class => 'lm-i' %>
@@ -53,11 +53,3 @@
 
         <p id="notice"><%= notice %></p> -->
       </footer>
-   <h1 style = "color: #c3073f;
-            text-align:center;">New tweet</h1>
-
-<%= render 'form', tweet: @tweet %>
-
-<%= link_to 'Back', tweets_path %><
-  </main>
-

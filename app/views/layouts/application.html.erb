@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="home-html">
   <head>
     <title>Project0</title>
     <%= csrf_meta_tags %>
@@ -11,12 +11,7 @@
 
   <body class = "bodycolor">
   <%= render "layouts/flashes" %>
-  <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+  <%= render "layouts/navbar" %>
     <%= yield %>
 
 

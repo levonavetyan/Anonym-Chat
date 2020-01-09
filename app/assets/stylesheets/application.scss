@@ -352,6 +352,7 @@
      background-color: #C3073F;
      text-decoration: none;
  }
+ 
  .lm-p {
      font-size: 150%;
      margin: auto 0;
@@ -919,14 +920,14 @@ main.home-page {
     width: 20px;
     height: 20px;
 } .lk {
-    background-image: url("heart.png");
+    background-image: image-url("heart.png");
 } .ht {
-    background-image: url("heart.png");
+    background-image: image-url("heart.png");
 }
 .asd {
     width: 20px;
     height: 20px;
-    background-image: url("heart.png");
+    background-image: image-url("heart.png");
 }
 .like-button-a, .dislike-button-a {
     align-items: center;
