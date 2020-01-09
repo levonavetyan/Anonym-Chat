@@ -514,3 +514,424 @@
      font-size: 14px;
      margin-left: 80%;
  }
+
+* {
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 0.2s;
+    background-size: contain;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+} 
+
+.bodycolor {
+    background-color: #1a1a1d;
+}
+
+
+
+main.signin {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+} main.signin form {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+} main.signin form input {
+    border-radius: 10px;
+    max-width: 600px;
+    font-size: 11pt;
+    padding: 10px;
+    width: 100%;
+} main.signin form input[type=submit] {
+    margin-top: 10px;
+    color: white;
+    border: none;
+} main.signin form input[type=submit]:enabled:hover {
+    background-color: #08e;
+} main.signin img {
+    border: 2px solid #222;
+    image-resolution: 100px;
+    margin-bottom: 10px;
+    width: 300px;
+} .tumo-gif {
+    background-image: image-url("tumo.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    max-width: 600px;
+    height: 20%;
+    width: 60%;
+} .or {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+} .or p.signin-p {
+    background-color: #222;
+    text-align: center;
+    font-size: 130%;
+    color: #fff;
+    width: 50px;
+    z-index: 1;
+} main.signin form a {
+    margin-top: 10px;
+    font-size: 120%;
+    color: #08e;
+} .or p.signup-p {
+    background-color: #222;
+    text-align: center;
+    font-size: 130%;
+    color: #fff;
+    width: 220px;
+    z-index: 1;
+} main.signin form input[type=submit]:enabled {
+    background-color: #09f;
+}  main.signin form input[type=submit]:disabled {
+    background-color: #8bf;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 15%;
+    margin-top: 10px;
+} .field em {
+    color: gray;
+}
+.edit_user{
+    margin-top: 20px;
+    height: 40%;
+    width: 70%;
+}
+.actions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button_to{
+    width: 30%;
+}
+.signin a{
+    margin-top: 5%;
+    font-size: 22pt;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    main.signin {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        
+        width: 100%;
+        height: 100%;
+    } main.signin form {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    } main.signin form input {
+        font-size: 11pt;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 10px;
+    } main.signin form input[type=submit] {
+        margin-top: 10px;
+        color: white;
+        border: none;
+    } main.signin form input[type=submit]:enabled:hover {
+        background-color: #08e;
+    } main.signin img {
+        border: 2px solid #222;
+        image-resolution: 100px;
+        margin-bottom: 10px;
+        width: 300px;
+    } .tumo-gif {
+        margin-top: 15%;
+        background-image: image-url("tumo.gif");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        
+        height: 20%;
+        width: 60%;
+    } .or {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        display: flex;
+    } .or p.signin-p {
+        background-color: #222;
+        text-align: center;
+        font-size: 130%;
+        color: #fff;
+        width: 50px;
+        z-index: 1;
+    } main.signin form a {
+        margin-top: 10px;
+        font-size: 120%;
+        color: #08e;
+    } .or p.signup-p {
+        background-color: #222;
+        text-align: center;
+        font-size: 130%;
+        color: #fff;
+        width: 220px;
+        z-index: 1;
+    } main.signin form input[type=submit]:enabled {
+        background-color: #09f;
+    }  main.signin form input[type=submit]:disabled {
+        background-color: #8bf;
+    }
+    
+    .field{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 15%;
+    } .field em {
+        color: gray;
+    }
+    .edit_user{
+        height: 40%;
+        width: 70%;
+    }
+    .actions{
+        width: 100%;
+    }
+    .button_to{
+        font-size: 100%;
+        width: 30%;
+    
+    }
+    .signin a{
+        margin-top: 5%;
+        font-size: 14pt;
+    }
+}
+.check{
+    display: flex;
+    align-items: center;
+} .check .rm {
+    width: 100px;  
+    margin-top: 17px;  
+}
+ .checkfield{
+     width: 200px;
+ } 
+ 
+//==========================================================================================
+
+
+.home-pg-header, .home-pg-footer {
+    justify-content: space-between;
+    background-color: #1a1a1d;
+    align-items: center;
+    min-height: 100px;
+    min-width: 400px;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+} .content {
+    background-size: cover;
+    background-color: #000000;
+    background-attachment: fixed;
+    justify-content: center;
+    min-height: 1500px;
+    min-width: 500px;
+    display: flex;
+    width: 100%;
+}
+.main-block{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    width: 60%;
+    background-color: #4e4e50 !important;
+}
+.post_content{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+
+}
+.sub_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: bold;
+}
+.con_box{
+    height: 65%;
+    float: left;
+}
+.bottom_box{
+    display: flex;
+    justify-content: space-between;
+}
+main.home-page {
+    background-color: #000000;
+    flex-direction: column;
+    align-items: center;
+    min-height: 1400px;
+    position: absolute;
+    min-width: 400px;
+    display: flex;
+    width: 100%;
+}
+.left-menu-button {
+    justify-content: space-around;
+    flex-direction: column;
+    display: flex;
+    height: 50px;
+    width: 50px;
+}
+.left-menu-button .line {
+    border: 3px solid #c3073f;
+    border-radius: 3px;
+    width: 100%;
+}
+.left-menu {
+    display: flex;
+    box-shadow: 10px 0px 50px 0px #222;
+    background-color: #1a1a1d;
+    position: absolute;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 20px;
+    height: 100vh;
+    left: -600px;
+    width: 30%;
+    top: 0;
+    overflow: hidden auto;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.menu {width: 70px}
+.menu:hover .left-menu {left: 0px}
+
+.logout {
+    background-image: image-url("logout.png");
+    background-color: transparent;
+    outline: none !important;
+    background-size: 80%;
+    border-radius: 10px;
+    width: 50px;
+} .logout:hover {
+    background-color: #87a3c3;
+}
+.navbar-link{
+    text-decoration: none;
+    color: #c3073f;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex; 
+}
+.navbar-link:hover{
+    background-color: #950740;
+    color: #ffffff;
+    text-decoration: none;  
+}
+.lm-i {
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+} .lm-i:hover {
+    background-color: #950740;
+    text-decoration: none;
+}
+.lm-p {
+    font-size: 150%;
+    margin: auto 0;
+    color:white;
+}
+.logo {
+    background-image: image-url("avatar.png");
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-content {
+    margin-top: 10px;
+    width: 90%;
+    padding: 10px;
+    background-color: #5f5f61;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} .sub-box {
+    color: #ffffff;
+    font-size: 200%;
+} .con-box {
+    width: 100%;
+    color: #ffcccc;
+} .bottom-box {
+    width: 100%;
+} .like-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} .like {
+    width: 20px;
+    height: 20px;
+} .lk {
+    background-image: url("heart.png");
+} .ht {
+    background-image: url("heart.png");
+}
+.asd {
+    width: 20px;
+    height: 20px;
+    background-image: url("heart.png");
+}
+.like-button-a, .dislike-button-a {
+    align-items: center;
+    display: flex;
+}
+
+
+

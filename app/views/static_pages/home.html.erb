@@ -1,13 +1,81 @@
+<!--Logged in as <strong><%= current_user.email %></strong>. -->
 
-    <p class="navbar-text float-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-</p>
+<html class="home-html">
+  <head>
 
-<p id="notice"><%= notice %></p>
+  </head>
+
+  <body>
+    <main class="home-page">
+      <header class="home-pg-header">
+        <div class="menu">
+          <div class="left-menu-button">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="left-menu">
+            <div class="top_box">
+              <a href="users/edit" class="lm-i">
+                <div class="logo"></div>
+                <p class="lm-p">My Account</p>
+              </a>
+              <a href="#" class="lm-i">
+                <p class="lm-p">Settings</p>
+              </a>
+              <a href="rooms" class="lm-i">
+                <p class="lm-p">Chat</p>
+              </a>
+              <a href="tweets/new" class="lm-i">
+                <p class="lm-p">Create New Tweet</p>
+              </a>
+             <a href="tweets" class="lm-i">
+                <p class="lm-p">Show my Tweets</p>
+              </a> 
+            </div>
+            <div class="bottom_box">
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="main-block">
+          <% @tweets.each do |tweet| %>
+            <div class="post-content">
+              <div class="sub-box">
+                <p><%= tweet.subject %></p>
+              </div>
+              <div class="con-box">
+                <p><%= tweet.tweet_content %></p>
+              </div>
+              <div class="bottom-box">
+                <div class="like-box">
+                  
+                  <div class="like-button-a"><a rel="nofollow" data-method="put" href="<%= like_tweet_path(tweet) %>" class="lk like"><div class="like-cnt"></div></a><%= tweet.get_upvotes.size %></div>
+                  <div class="dislike-button-a"><a rel="nofollow" data-method="put" href="<%= dislike_tweet_path(tweet) %>" class="ht like"><div class="like-cnt"></div></a><%= tweet.get_upvotes.size %></div>
+                </div>
+                <div class="time-box">
+                  <p><%= tweet.created_at %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <footer class="home-pg-footer">
+          <!--  <p class="navbar-text float-right">
+        <% if user_signed_in? %>
+          
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <% end %>
+        </p> 
+
+        <p id="notice"><%= notice %></p> -->
+      </footer>
+    </main>
+  </body>
+</html>
