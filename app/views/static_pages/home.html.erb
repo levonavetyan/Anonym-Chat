@@ -39,28 +39,28 @@
         </div>
       </header>
       <div class="content">
-        <div class="main_block">
-                <% @tweets.each do |tweet| %>
-                  <div class="post_content">
-                    <div class="sub_box">
-                    <p><%= tweet.subject %></p>
-                    </div>
-                    <div class="con_box">
-                      <p><%= tweet.tweet_content %></p>
-                    </div>
-                    <div class="bottom_box">
-                      <div class="like_box">
-                      <%= link_to "I like it", like_tweet_path(tweet), method: :put, class: "like" %><span>(<%= tweet.get_upvotes.size %>)</span>
-                      <%= link_to "I hate it", dislike_tweet_path(tweet), method: :put, class: "like" %><span>(<%= tweet.get_downvotes.size %>)</span>
-                     </div>
-                      <div class="time_box">
-                      <p><%= tweet.created_at %></p>
-                    </div>
-                     </div>
-                  </div>
-                <% end %>
-              
-      </div>
+        <div class="main-block">
+          <% @tweets.each do |tweet| %>
+            <div class="post-content">
+              <div class="sub-box">
+                <p><%= tweet.subject %></p>
+              </div>
+              <div class="con-box">
+                <p><%= tweet.tweet_content %></p>
+              </div>
+              <div class="bottom-box">
+                <div class="like-box">
+                  
+                  <div class="like-button-a"><a rel="nofollow" data-method="put" href="<%= like_tweet_path(tweet) %>" class="lk like"><div class="like-cnt"></div></a><%= tweet.get_upvotes.size %></div>
+                  <div class="dislike-button-a"><a rel="nofollow" data-method="put" href="<%= dislike_tweet_path(tweet) %>" class="ht like"><div class="like-cnt"></div></a><%= tweet.get_upvotes.size %></div>
+                </div>
+                <div class="time-box">
+                  <p><%= tweet.created_at %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
       <footer class="home-pg-footer">
           <!--  <p class="navbar-text float-right">

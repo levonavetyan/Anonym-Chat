@@ -31,7 +31,7 @@
 } 
 
 .bodycolor {
-    background-color: #98B4D4;
+    background-color: #1a1a1d;
 }
 
 
@@ -252,7 +252,7 @@ main.signin {
 
 .home-pg-header, .home-pg-footer {
     justify-content: space-between;
-    background-color: #98b4d4;
+    background-color: #1a1a1d;
     align-items: center;
     min-height: 100px;
     min-width: 400px;
@@ -261,7 +261,7 @@ main.signin {
     width: 100%;
 } .content {
     background-size: cover;
-    background-image: image-url("tumoo.jpg");
+    background-color: #000000;
     background-attachment: fixed;
     justify-content: center;
     min-height: 1500px;
@@ -269,12 +269,12 @@ main.signin {
     display: flex;
     width: 100%;
 }
-.main_block{
+.main-block{
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
     width: 60%;
-    background-color: white !important;
+    background-color: #4e4e50 !important;
 }
 .post_content{
     width: 100%;
@@ -298,12 +298,11 @@ main.signin {
     float: left;
 }
 .bottom_box{
-    height: 20%;
     display: flex;
     justify-content: space-between;
 }
 main.home-page {
-    background-color: #98b4d4;
+    background-color: #000000;
     flex-direction: column;
     align-items: center;
     min-height: 1400px;
@@ -320,14 +319,14 @@ main.home-page {
     width: 50px;
 }
 .left-menu-button .line {
-    border: 3px solid #ffffff;
+    border: 3px solid #c3073f;
     border-radius: 3px;
     width: 100%;
 }
 .left-menu {
     display: flex;
     box-shadow: 10px 0px 50px 0px #222;
-    background-color: #98b4d4;
+    background-color: #1a1a1d;
     position: absolute;
     min-width: 300px;
     max-width: 500px;
@@ -339,7 +338,7 @@ main.home-page {
     overflow: hidden auto;
     flex-direction: column;
     justify-content: space-between;
-    position: fixed; 
+    position: fixed;
 }
 
 .menu {width: 70px}
@@ -351,20 +350,21 @@ main.home-page {
     outline: none !important;
     background-size: 80%;
     border-radius: 10px;
-    height: 50px;
     width: 50px;
 } .logout:hover {
     background-color: #87a3c3;
 }
 .navbar-link{
     text-decoration: none;
+    color: #c3073f;
     border-radius: 10px;
     margin-top: 10px;
     padding: 10px;
     display: flex; 
 }
 .navbar-link:hover{
-    background-color: #87a3c3;
+    background-color: #950740;
+    color: #ffffff;
     text-decoration: none;  
 }
 .lm-i {
@@ -374,7 +374,7 @@ main.home-page {
     padding: 10px;
     display: flex;
 } .lm-i:hover {
-    background-color: #87a3c3;
+    background-color: #950740;
     text-decoration: none;
 }
 .lm-p {
@@ -389,4 +389,51 @@ main.home-page {
     height: 50px;
     width: 50px;
 }
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-content {
+    margin-top: 10px;
+    width: 90%;
+    padding: 10px;
+    background-color: #5f5f61;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} .sub-box {
+    color: #ffffff;
+    font-size: 200%;
+} .con-box {
+    width: 100%;
+    color: #ffcccc;
+} .bottom-box {
+    width: 100%;
+} .like-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} .like {
+    width: 20px;
+    height: 20px;
+} .lk {
+    background-image: url("heart.png");
+} .ht {
+    background-image: url("heart.png");
+}
+.asd {
+    width: 20px;
+    height: 20px;
+    background-image: url("heart.png");
+}
+.like-button-a, .dislike-button-a {
+    align-items: center;
+    display: flex;
+}
+
+
 
