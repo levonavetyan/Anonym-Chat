@@ -2,7 +2,7 @@
   <div class="content">
     <div class="main-block">
       <% if @tweets.count != 0 %>
-        <% @tweets.desc.each do |tweet| %>
+        <% @tweets.each do |tweet| %>
           <div class="post-content">
             <div class="sub-box">
               <p><%= tweet.subject %></p>
