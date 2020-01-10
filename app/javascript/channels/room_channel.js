@@ -24,15 +24,11 @@ $(document).on('turbolinks:load', function () {
       console.log(data)
 
       if(data.user.id != parseInt(document.cookie.split('=')[1], 10)){
-        $('#post_msg').append(`<div class="chat_text_area"><p class="message-content ">` +
-        data.message.content + `</p><div class="msg-d"> <p class="message-data">` + data.timestamp +
-        `</p></div></div>`)
+        $('#post_msg').append(`<div class="chat_text_area"><p class="message-content ">${data.message.content}</div>`)
       }
       else{
         console.log("here")
-        $('#post_msg').append(`<div class="chat_text_area"><p class="user_message-content ">` +
-        data.message.content + `</p><div class="msg-d"> <p class="user_message-data">` + data.timestamp +
-        `</p></div></div>`)
+        $('#post_msg').append(`<div class="chat_text_area"><p class="message-content ">${data.message.content}</div>`)
       }
 
       $('#msg').val('')

@@ -29,7 +29,7 @@
   }
 
   .bodycolor {
-      background-color: #1A1A1D;
+      background-color: #EAEDED;
   }
 
 
@@ -460,7 +460,7 @@
   }
 
   .room-name {
-      color: #ffffff;
+      color: white;
       font-family: sans-serif;
       font-size: 200%;
   }
@@ -503,16 +503,14 @@
       border-radius: 0 10px 10px 0;
   }
 
-  .chat_text_area{
-      background-color: #1A1A1D;
-      color: #C3073F;
-      margin: 0 0 -20px;
-  }
   .message-content{
-      margin-right: 20%;
+      padding: 10px;
+    //   align-self: flex-start;
   }
   .user-message-content{
-    margin-left: 80%;
+    padding: 10px;
+    color: #756e6e;
+    // align-self: flex-end;
   }
   .message-data{
       margin: 0 0 5px;
@@ -525,6 +523,7 @@
       font-size: 14px;
       margin-left: 80%;
       padding-bottom: 30px;
+      color: #C3073F;
   }
 
  * {
@@ -784,7 +783,7 @@
      flex-direction: column-reverse;
      justify-content: flex-start;
      width: 60%;
-     background-color: #4e4e50 !important;
+     background-color: black !important;
  }
  .post_content{
      width: 100%;
@@ -899,7 +898,9 @@
      height: 50px;
      width: 50px;
  }
-
+.time-box{
+    font-size: 10px;
+}
  .main-block {
      display: flex;
      flex-direction: column;
@@ -910,22 +911,23 @@
      margin-top: 10px;
      width: 90%;
      padding: 10px;
-     background-color: #5f5f61;
+     background-color: white;
      border-radius: 10px;
      display: flex;
      flex-direction: column;
      align-items: center;
  } .sub-box {
-     color: #ffffff;
+     color: black;
      font-size: 200%;
  } .con-box {
      width: 100%;
-     color: #ffcccc;
+     color: #C3073F;
  } .bottom-box {
      width: 100%;
  } .like-box {
      width: 100%;
      display: flex;
+     margin-left: 1040px;
      justify-content: space-between;
  } .like {
      width: 20px;
@@ -963,11 +965,42 @@
      margin-top: 17px;
  }
 
+.new_message {
+    width: 80%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    padding: 10px;
+    background-color: #5f5f61;
+}
+.chat-messages {
+    height: calc(100% - 150px);
+    overflow-y: scroll;
+    padding: 10px;
+}
 
+.room-page {
+    position: absolute;
+    overflow: hidden;
+    height: calc(100% - 100px);
+    background-color: black;
+}
 
+.chat_text_area {
+    margin-top: 50px;
+    padding: 10px;
+    width: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px 0 #000000;
+}
 
-
-
+p{
+    margin: 0 !important;
+}
 //  * {
 //      background-repeat: no-repeat;
 //      background-position: center;

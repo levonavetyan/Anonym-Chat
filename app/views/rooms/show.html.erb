@@ -1,3 +1,4 @@
+
 <main class="room-page">
   <p class="room-name">
     <%= @room.title %>
@@ -12,24 +13,12 @@
             <p class="user-message-content">
               <%= message.content %>
             </p>
-
-            <div class="msg-d">
-              <p class="user-message-data">
-                <%= message.timestamp %>
-              </p>
-            </div>
           </div>
         <% else %>
           <div class="chat_text_area">
             <p class="message-content ">
               <%= message.content %>
             </p>
-
-            <div class="msg-d">
-              <p class="message-data">
-                <%= message.timestamp %>
-              </p>
-            </div>
           </div>
         <% end %>
       <% end %>
